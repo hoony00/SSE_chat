@@ -1,6 +1,18 @@
 # Spring Boot 다중 익명 채팅방 서비스
 
-이 프로젝트는 Spring Boot와 SSE (Server-Sent Events) 프로토콜을 활용하여 다중 익명 채팅방을 구현한 예제입니다. 이 프로젝트는 HTTP의 단점을 극복하며, 서버-DB-클라이언트 간의 1:N 통신 모델을 구현하고 있습니다. MongoDB를 데이터베이스로 사용하였습니다.
+이 프로젝트는 Spring Boot와 SSE (Server-Sent Events) 프로토콜을 활용하여 다중 익명 채팅방을 구현한 예제입니다. 이 프로젝트는 HTTP의 단점을 극복하며, 서버-DB-클라이언트 간의 1:N 통신 모델을 구현하고 있습니다. MongoDB를 데이터베이스로 사용하였습니다. <p>
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/962df721-8794-4601-bb6e-f8df69380d34.png)
+
+
+------
+
+### 채팅 멤버 
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/e04ae2bb-0964-4ac8-af55-c7ce59aa1100.png)
+### 채팅 화면
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/1a6178c0-5905-4b2c-8315-83c85b7b2827.png)
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/26c6127a-0c7f-49bd-81cf-bbecbdd8eac5.png)
+
+
 
 ### 주요 기능 및 특징
 - 채팅방 번호 기반 자유로운 다중 채팅: 사용자는 채팅방 번호를 기반으로 원하는 채팅방에 들어갈 수 있으며, 원하는 채팅방을 생성할 수도 있습니다. 이를 통해 자유로운 채팅 환경을 제공합니다.
@@ -14,6 +26,10 @@
 - MongoDB
 - HTML, CSS
 - JavaScript
+
+
+### 시스템 구성도
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/ffb8f010-9420-402c-922c-7f62e887c555.png)
 
 - - -
 
@@ -37,3 +53,6 @@ Flux의 활용: 실시간 채팅 애플리케이션에서, 사용자가 메시�
 @tailable 커서: MongoDB의 @tailable 커서를 사용하여 채팅 메시지 컬렉션을 지속적으로 모니터링합니다. 이 커서를 통해 데이터베이스에 새로운 메시지가 추가될 때마다 해당 변경 사항을 감지하고, 이를 Flux로 변환하여 클라이언트에게 전달합니다. 이를 통해 실시간으로 메시지를 수신하는 기능을 구현했습니다.
 
 이렇게 Flux와 @tailable을 조합하여 사용자가 실시간으로 채팅 메시지를 주고받을 수 있는 환경을 만들었습니다. 이 프로젝트는 이러한 기술을 활용하여 HTTP의 단점을 극복하고, 사용자에게 더 나은 실시간 채팅 경험을 제공하는데 성공했습니다.
+
+![image](https://github.com/hoony00/JSP_INHAtc_Web/assets/86902854/85580c07-0868-4df3-bf14-daa396cea50f.png)
+
